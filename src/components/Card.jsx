@@ -1,6 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
+import MyText from "./MyText";
 import colors from "../config/colors";
 
 function Card({ title, description, image }) {
@@ -8,8 +9,8 @@ function Card({ title, description, image }) {
     <View style={styles.card}>
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
+        <MyText style={styles.title}>{title}</MyText>
+        <MyText style={styles.description}>{description}</MyText>
       </View>
     </View>
   );

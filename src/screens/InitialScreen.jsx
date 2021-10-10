@@ -1,7 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Image, Text } from "react-native";
-import MyButton from "../components/MyButton";
+import { StyleSheet, View, Image } from "react-native";
 
+import MyText from "../components/MyText";
+import MyButton from "../components/MyButton";
 import colors from "../config/colors";
 
 function WelcomeScreen() {
@@ -9,7 +10,7 @@ function WelcomeScreen() {
     <View style={styles.background}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.title}>Sell What You Don't Need</Text>
+        <MyText style={styles.title}>Sell What You Don't Need</MyText>
       </View>
       <View style={styles.buttonsContainer}>
         <MyButton>Login</MyButton>
