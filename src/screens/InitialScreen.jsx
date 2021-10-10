@@ -5,7 +5,7 @@ import MyText from "../components/MyText";
 import MyButton from "../components/MyButton";
 import colors from "../config/colors";
 
-function WelcomeScreen() {
+function InitialScreen() {
   return (
     <View style={styles.background}>
       <View style={styles.logoContainer}>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
-    backgroundColor: colors.white,
+    backgroundColor: colors.light,
   },
   buttonsContainer: {
     padding: 15,
@@ -41,10 +41,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    color: colors.black,
     fontSize: 20,
     paddingVertical: 20,
   },
 });
 
-export default WelcomeScreen;
+export default InitialScreen;
