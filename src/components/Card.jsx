@@ -18,10 +18,11 @@ function Card({ title, description, image }) {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 15,
-    backgroundColor: "#fff",
-    marginBottom: 20,
+    borderRadius: 18,
+    backgroundColor: colors.white,
+    margin: 15,
     overflow: "hidden",
+    elevation: 5,
   },
   detailsContainer: {
     padding: 20,
@@ -32,8 +33,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 18,
-    color: colors.secondary,
-    fontWeight: "bold",
+    color: colors.primary,
   },
   title: {
     fontSize: 18,
