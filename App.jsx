@@ -8,7 +8,7 @@ import MessagesScreen from "./src/screens/MessagesScreen";
 import ViewImageScreen from "./src/screens/ViewImageScreen";
 
 export default function App() {
-  return <ListingDetailsScreen />;
+  return <MessagesScreen />;
 }
 
 const styles = StyleSheet.create({});
