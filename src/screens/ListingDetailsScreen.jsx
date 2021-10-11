@@ -12,9 +12,9 @@ function ListingDetailsScreen() {
       <View style={styles.detailsContainer}>
         <MyText style={styles.title}>Red jacket for sale</MyText>
         <MyText style={styles.price}>$100</MyText>
-        <View style={styles.userContainer}>
-          <ListItem image={require("../assets/mosh.jpg")} title="Román Rodríguez" description="5 Listings" />
-        </View>
+      </View>
+      <View style={styles.userContainer}>
+        <ListItem image={require("../assets/mosh.jpg")} title="Román Rodríguez" description="5 Listings" />
       </View>
     </View>
   );
@@ -26,17 +26,16 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: 300,
+    height: 250,
   },
   price: {
-    color: colors.secondary,
-    fontWeight: "bold",
+    color: colors.primary,
     fontSize: 20,
     marginVertical: 10,
   },
   title: {
     fontSize: 24,
-    fontWeight: "500",
+    fontWeight: "bold",
   },
   userContainer: {
     marginVertical: 40,
