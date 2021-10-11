@@ -17,9 +17,4 @@ const text = {
   fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
 };
 
-const styles = {
-  colors,
-  text,
-};
-
-export default styles;
+export { colors, text };
