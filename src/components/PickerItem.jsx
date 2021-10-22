@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
 
-import MyText from "./MyText";
+import { MyText } from ".";
 
 function PickerItem({ label, onPress }) {
   return (

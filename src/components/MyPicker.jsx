@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet, TouchableWithoutFeedback, Modal, Button, FlatList } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import MyText from "./MyText";
-import Screen from "./Screen";
-import PickerItem from "./PickerItem";
+import { MyText, Screen, PickerItem } from ".";
 import { colors } from "../config/styles";
 
 function MyPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {

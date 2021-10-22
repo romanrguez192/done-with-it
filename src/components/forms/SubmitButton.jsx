@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormikContext } from "formik";
 
-import MyButton from "../MyButton";
+import { MyButton } from "..";
 
 function SubmitButton({ title }) {
   const { handleSubmit } = useFormikContext();
