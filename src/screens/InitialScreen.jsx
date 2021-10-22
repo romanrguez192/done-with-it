@@ -1,9 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
 
-import Screen from "../components/Screen";
-import MyText from "../components/MyText";
-import MyButton from "../components/MyButton";
+import { Screen, MyText, MyButton } from "../components";
 
 function InitialScreen() {
   return (

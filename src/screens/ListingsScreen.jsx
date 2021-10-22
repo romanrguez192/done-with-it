@@ -1,8 +1,7 @@
 import React from "react";
 import { FlatList } from "react-native";
 
-import Screen from "../components/Screen";
-import Card from "../components/Card";
+import { Screen, Card } from "../components";
 
 const listings = [
   {

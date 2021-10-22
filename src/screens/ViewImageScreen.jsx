@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import Screen from "../components/Screen";
+import { Screen } from "../components";
 import { colors } from "../config/styles";
 
 function ViewImageScreen() {
