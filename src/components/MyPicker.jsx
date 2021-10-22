@@ -18,7 +18,13 @@ function MyPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
           {icon && <MaterialCommunityIcons name={icon} size={20} color={colors.medium} style={styles.icon} />}
-          <MyText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</MyText>
+          <MyText style={styles.text}>
+            {selectedItem ? (
+              <MyText style={styles.text}>{selectedItem.label}</MyText>
+            ) : (
+              <MyText style={styles.placeholder}>{placeholder}</MyText>
+            )}
+          </MyText>
           <MaterialCommunityIcons name="chevron-down" size={20} color={colors.medium} />
         </View>
       </TouchableWithoutFeedback>
@@ -38,8 +44,8 @@ function MyPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.light,
-    borderRadius: 25,
+    backgroundColor: colors.white,
+    borderRadius: 18,
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
@@ -48,6 +54,10 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+  },
+  placeholder: {
+    flex: 1,
+    color: colors.medium,
   },
   text: {
     flex: 1,

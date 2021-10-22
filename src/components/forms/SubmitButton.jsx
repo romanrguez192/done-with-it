@@ -3,10 +3,10 @@ import { useFormikContext } from "formik";
 
 import { MyButton } from "..";
 
-function SubmitButton({ title }) {
+function SubmitButton({ ...props }) {
   const { handleSubmit } = useFormikContext();
 
-  return <MyButton title={title} onPress={handleSubmit} />;
+  return <MyButton {...props} onPress={handleSubmit} />;
 }
 
 export default SubmitButton;
