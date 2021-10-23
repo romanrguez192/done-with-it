@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-import { MyText } from "..";
+import Text from "../Text";
 
-function MyErrorMessage({ error, visible }) {
+function ErrorMessage({ error, visible }) {
   if (!visible || !error) return null;
 
-  return <MyText style={styles.error}>{error}</MyText>;
+  return <Text style={styles.error}>{error}</Text>;
 }
 
 const styles = StyleSheet.create({
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyErrorMessage;
+export default ErrorMessage;

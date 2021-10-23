@@ -1,18 +1,18 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
 
-import { Screen, MyText, MyButton } from "../components";
+import { Screen, Text, Button } from "../components";
 
 function InitialScreen() {
   return (
     <Screen style={styles.screen}>
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <MyText style={styles.title}>Sell What You Don't Need</MyText>
+        <Text style={styles.title}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <MyButton>Login</MyButton>
-        <MyButton color="secondary">Sign Up</MyButton>
+        <Button>Login</Button>
+        <Button color="secondary">Sign Up</Button>
       </View>
     </Screen>
   );

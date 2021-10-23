@@ -1,6 +1,6 @@
-export { default as MyForm } from "./MyForm";
-export { default as MyFormField } from "./MyFormField";
-export { default as MyFormPicker } from "./MyFormPicker";
-export { default as MyErrorMessage } from "./MyErrorMessage";
+export { default as Form } from "./Form";
+export { default as FormField } from "./FormField";
+export { default as FormPicker } from "./FormPicker";
+export { default as ErrorMessage } from "./ErrorMessage";
 export { default as SubmitButton } from "./SubmitButton";
-export { default as MyTextInput } from "./MyTextInput";
+export { default as TextInput } from "./TextInput";

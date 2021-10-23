@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
-import { MyText } from ".";
+import Text from "./Text";
 import { colors } from "../config/styles";
 
-function MyButton({ children, onPress, color = "primary" }) {
+function Button({ children, onPress, color = "primary" }) {
   return (
     <TouchableOpacity activeOpacity={0.4} style={[styles.button, { backgroundColor: colors[color] }]} onPress={onPress}>
-      <MyText style={styles.text}>{children}</MyText>
+      <Text style={styles.text}>{children}</Text>
     </TouchableOpacity>
   );
 }
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyButton;
+export default Button;

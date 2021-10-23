@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { View, StyleSheet, TouchableWithoutFeedback, Modal, Button, FlatList } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import { MyText, Screen, PickerItem } from ".";
+import Text from "./Text";
+import Screen from "./Screen";
+import PickerItem from "./PickerItem";
 import { colors } from "../config/styles";
 
-function MyPicker({
+function Picker({
   icon,
   items,
   numberOfColumns = 1,
@@ -26,13 +28,13 @@ function MyPicker({
       <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
         <View style={styles.container}>
           {icon && <MaterialCommunityIcons name={icon} size={20} color={colors.medium} style={styles.icon} />}
-          <MyText style={styles.text}>
+          <Text style={styles.text}>
             {selectedItem ? (
-              <MyText style={styles.text}>{selectedItem.label}</MyText>
+              <Text style={styles.text}>{selectedItem.label}</Text>
             ) : (
-              <MyText style={styles.placeholder}>{placeholder}</MyText>
+              <Text style={styles.placeholder}>{placeholder}</Text>
             )}
-          </MyText>
+          </Text>
           <MaterialCommunityIcons name="chevron-down" size={20} color={colors.medium} />
         </View>
       </TouchableWithoutFeedback>
@@ -76,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyPicker;
+export default Picker;

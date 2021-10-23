@@ -9,7 +9,7 @@ import SignUpScreen from "./src/screens/SignUpScreen";
 import ListingEditScreen from "./src/screens/ListingEditScreen";
 
 import Screen from "./src/components/Screen";
-import MyPicker from "./src/components/MyPicker";
+import Picker from "./src/components/Picker";
 import PickItem from "./src/components/PickerItem";
 
 export default function App() {
