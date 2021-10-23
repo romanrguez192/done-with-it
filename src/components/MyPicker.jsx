@@ -5,7 +5,15 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MyText, Screen, PickerItem } from ".";
 import { colors } from "../config/styles";
 
-function MyPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
+function MyPicker({
+  icon,
+  items,
+  numberOfColumns = 1,
+  onSelectItem,
+  PickerItemComponent = PickerItem,
+  placeholder,
+  selectedItem,
+}) {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handlePress = (item) => {
@@ -34,7 +42,10 @@ function MyPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
-            renderItem={({ item }) => <PickerItem label={item.label} onPress={() => handlePress(item)} />}
+            numColumns={numberOfColumns}
+            renderItem={({ item }) => (
+              <PickerItemComponent item={item} label={item.label} onPress={() => handlePress(item)} />
+            )}
           />
         </Screen>
       </Modal>
