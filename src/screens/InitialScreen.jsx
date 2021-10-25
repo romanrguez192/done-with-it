@@ -3,7 +3,7 @@ import { StyleSheet, View, Image } from "react-native";
 
 import { Screen, Text, Button } from "../components";
 
-function InitialScreen() {
+function InitialScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.logoContainer}>
@@ -11,8 +11,10 @@ function InitialScreen() {
         <Text style={styles.title}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <Button>Login</Button>
-        <Button color="secondary">Sign Up</Button>
+        <Button onPress={() => navigation.navigate("Log In")}>Login</Button>
+        <Button color="secondary" onPress={() => navigation.navigate("Sign Up")}>
+          Sign Up
+        </Button>
       </View>
     </Screen>
   );

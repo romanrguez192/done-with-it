@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Image } from "react-native";
 import * as Yup from "yup";
 
-import { Screen } from "../components/Screen";
+import { Screen } from "../components";
 import { Form, FormField, SubmitButton } from "../components/forms";
 
 const validationSchema = Yup.object().shape({
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   logo: {
-    width: 80,
-    height: 80,
+    width: 100,
+    height: 100,
     alignSelf: "center",
-    marginTop: 50,
-    marginBottom: 20,
+    marginTop: 15,
+    marginBottom: 25,
   },
 });
 
