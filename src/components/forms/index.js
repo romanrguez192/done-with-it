@@ -4,3 +4,6 @@ export { default as FormPicker } from "./FormPicker";
 export { default as ErrorMessage } from "./ErrorMessage";
 export { default as SubmitButton } from "./SubmitButton";
 export { default as TextInput } from "./TextInput";
+export { default as FormImagePicker } from "./FormImagePicker";
+export { default as ImageInput } from "./ImageInput";
+export { default as ImageInputList } from "./ImageInputList";
