@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableWithoutFeedback, Modal, Button, FlatList } from "react-native";
+import { View, StyleSheet, TouchableWithoutFeedback, Modal, FlatList } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import Text from "./Text";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
+import Button from "./Button";
 import { colors } from "../config/styles";
 
 function Picker({
@@ -40,7 +41,9 @@ function Picker({
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">
         <Screen>
-          <Button title="Close" onPress={() => setModalVisible(false)} />
+          <View style={styles.buttonContainer}>
+            <Button onPress={() => setModalVisible(false)}>Close</Button>
+          </View>
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
@@ -56,6 +59,9 @@ function Picker({
 }
 
 const styles = StyleSheet.create({
+  buttonContainer: {
+    paddingHorizontal: 5,
+  },
   container: {
     backgroundColor: colors.white,
     borderRadius: 18,
