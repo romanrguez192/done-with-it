@@ -1,22 +1,24 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, ScrollView } from "react-native";
 
 import { Text } from "../components";
 import { ListItem } from "../components/lists";
 import { colors } from "../config/styles";
 
-function ListingDetailsScreen() {
+function ListingDetailsScreen({ route }) {
+  const listing = route.params;
+
   return (
-    <View>
-      <Image style={styles.image} source={require("../assets/jacket.jpg")} />
+    <ScrollView>
+      <Image style={styles.image} source={listing.image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>Red jacket for sale</Text>
-        <Text style={styles.price}>$100</Text>
+        <Text style={styles.title}>{listing.title}</Text>
+        <Text style={styles.price}>${listing.price}</Text>
       </View>
       <View style={styles.userContainer}>
         <ListItem image={require("../assets/mosh.jpg")} title="Román Rodríguez" description="5 Listings" />
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

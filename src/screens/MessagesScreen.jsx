@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
-import { Screen } from "../components";
 import { ListItem, ListItemSeparator, ListItemDeleteAction } from "../components/lists";
 
 const initialMessages = [
@@ -29,7 +28,7 @@ function MessagesScreen(props) {
   };
 
   return (
-    <Screen>
+    <View>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -55,7 +54,7 @@ function MessagesScreen(props) {
           ]);
         }}
       />
-    </Screen>
+    </View>
   );
 }
 

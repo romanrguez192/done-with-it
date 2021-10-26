@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 
-import { Screen, Icon } from "../components";
+import { Icon } from "../components";
 import { ListItem, ListItemSeparator } from "../components/lists";
 import { colors } from "../config/styles";
 
@@ -19,12 +19,13 @@ const menuItems = [
       name: "email",
       backgroundColor: colors.secondary,
     },
+    targetScreen: "Messages",
   },
 ];
 
-function AccountScreen() {
+function AccountScreen({ navigation }) {
   return (
-    <Screen>
+    <View>
       <View style={styles.container}>
         <ListItem title="Román Rodríguez" description="romanrodri192@gmail.com" image={require("../assets/mosh.jpg")} />
       </View>
@@ -37,12 +38,13 @@ function AccountScreen() {
             <ListItem
               title={item.title}
               Icon={<Icon name={item.icon.name} backgroundColor={item.icon.backgroundColor} />}
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
       </View>
       <ListItem title="Log Out" Icon={<Icon name="logout" backgroundColor={colors.alert} />} />
-    </Screen>
+    </View>
   );
 }
 

@@ -2,7 +2,7 @@ import { DefaultTheme } from "@react-navigation/native";
 
 import { colors } from "../config/styles";
 
-export default {
+const navigationTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
@@ -10,3 +10,5 @@ export default {
     background: colors.light,
   },
 };
+
+export default navigationTheme;
