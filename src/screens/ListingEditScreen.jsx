@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import * as Yup from "yup";
 
 import { Form, FormField, FormPicker, SubmitButton, FormImagePicker } from "../components/forms";
 import { Screen, CategoryPickerItem } from "../components";
+import listingsApi from "../api/listings";
 import useLocation from "../hooks/useLocation";
 import UploadScreen from "./UploadScreen";
 
@@ -93,6 +94,7 @@ function ListingEditScreen() {
   return (
     <ScrollView>
       <Screen style={styles.container}>
+        <UploadScreen onDone={() => setUploadVisible(false)} progress={progress} visible={uploadVisible} />
         <Form
           initialValues={{
             title: "",
