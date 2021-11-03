@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 18,
-    marginBottom: 10,
+    marginBottom: 15,
   },
 });
 

@@ -9,8 +9,6 @@ const get = apiClient.get;
 apiClient.get = async (url, params, axiosConfig) => {
   const response = await get(url, params, axiosConfig);
 
-  console.log(response);
-
   if (response.ok) {
     cache.set(url, response.data);
     return response;
