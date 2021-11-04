@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import * as Yup from "yup";
 
 import { ActivityIndicator } from "../components";
@@ -41,7 +41,7 @@ function SignUpScreen() {
   return (
     <>
       <ActivityIndicator visible={signupApi.loading || loginApi.loading} />
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Form
           initialValues={{ name: "", email: "", password: "" }}
           onSubmit={handleSubmit}
@@ -68,7 +68,7 @@ function SignUpScreen() {
           />
           <SubmitButton>Sign Up</SubmitButton>
         </Form>
-      </View>
+      </ScrollView>
     </>
   );
 }

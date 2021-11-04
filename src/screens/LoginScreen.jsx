@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Image, View } from "react-native";
+import { StyleSheet, Image, ScrollView } from "react-native";
 import * as Yup from "yup";
 
 import { ErrorMessage, Form, FormField, SubmitButton } from "../components/forms";
@@ -26,7 +26,7 @@ function LoginScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo-red.png")} />
       <Form initialValues={{ email: "", password: "" }} onSubmit={handleSubmit} validationSchema={validationSchema}>
         <ErrorMessage error="Invalid email or password." visible={loginFailed} />
@@ -50,7 +50,7 @@ function LoginScreen() {
         />
         <SubmitButton>Login</SubmitButton>
       </Form>
-    </View>
+    </ScrollView>
   );
 }
 
