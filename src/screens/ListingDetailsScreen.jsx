@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import { Image } from "react-native-expo-image-cache";
 
-import { Text } from "../components";
+import { Text, ContactForm } from "../components";
 import { ListItem } from "../components/lists";
 import { colors } from "../config/styles";
 
@@ -24,6 +24,9 @@ function ListingDetailsScreen({ route }) {
       <View style={styles.userContainer}>
         <ListItem image={require("../assets/mosh.jpg")} title="Román Rodríguez" description="5 Listings" />
       </View>
+      <View style={styles.formContainer}>
+        <ContactForm listing={listing} />
+      </View>
     </ScrollView>
   );
 }
@@ -31,6 +34,9 @@ function ListingDetailsScreen({ route }) {
 const styles = StyleSheet.create({
   detailsContainer: {
     padding: 20,
+  },
+  formContainer: {
+    padding: 15,
   },
   image: {
     width: "100%",
@@ -46,7 +52,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   userContainer: {
-    marginVertical: 40,
+    marginVertical: 30,
   },
 });
 

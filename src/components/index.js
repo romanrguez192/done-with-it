@@ -8,3 +8,4 @@ export { default as Screen } from "./Screen";
 export { default as CategoryPickerItem } from "./CategoryPickerItem";
 export { default as ActivityIndicator } from "./ActivityIndicator";
 export { default as OfflineBar } from "./OfflineBar";
+export { default as ContactForm } from "./ContactForm";
