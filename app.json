@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "Done With It",
+    "slug": "done-with-it",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
